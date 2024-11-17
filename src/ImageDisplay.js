@@ -1,15 +1,14 @@
 import React, { useRef, useState } from 'react';
-import './ImageDisplay.css'; // Ensure you have this file for styles
-
+import './ImageDisplay.css'; 
 const ImageDisplay = () => {
-  const imageNumberRef = useRef();
+  const [imageNumber, setImageNumber] = useRef();
   const [imageSrc, setImageSrc] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const imageNumber = imageNumberRef.current.value;
     if (imageNumber !== '') {
-      setImageSrc(`./media/images${imageNumber}.jpg`); // Adjust the path according to your directory structure
+      setImageSrc(`./media/images${imageNumber}.jpg`); 
     }
   };
 
@@ -17,7 +16,7 @@ const ImageDisplay = () => {
     <div className="image-display">
       <form onSubmit={handleSubmit}>
         <label>
-          Enter Image Number:
+          Image Number:
           <input type="number" ref={imageNumberRef} />
         </label>
         <button type="submit">Show Image</button>

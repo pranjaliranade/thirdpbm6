@@ -1,0 +1,11 @@
+.image-display {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .image-display img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+  

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './ImageDisplay.css'; 
 const ImageDisplay = () => {
-  const [imageNumber, setImageNumber] = useRef();
+  const imageNumberRef = useRef();
   const [imageSrc, setImageSrc] = useState('');
 
   const handleSubmit = (e) => {
@@ -16,7 +16,7 @@ const ImageDisplay = () => {
     <div className="image-display">
       <form onSubmit={handleSubmit}>
         <label>
-          Image Number:
+          Enter Image Number:
           <input type="number" ref={imageNumberRef} />
         </label>
         <button type="submit">Show Image</button>
